@@ -2,7 +2,16 @@
    DELAW — Design System
    ========================================================== */
 
-/* ---------- Reset & Base ---------- */
+/* ---------- Material Symbols ---------- */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
+  user-select: none;
+}
+
+/* Reset & Base ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; font-size: 16px; }
@@ -721,7 +730,14 @@ ul { list-style: none; }
   box-shadow: var(--shadow);
   transform: translateY(-3px);
 }
-.audience-card__icon { font-size: 2.5rem; margin-bottom: 16px; }
+.audience-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  color: var(--teal);
+}
+.audience-card__icon .material-symbols-outlined { font-size: 2.8rem; }
 .audience-card__title {
   font-size: 1rem;
   font-weight: 700;
@@ -774,6 +790,27 @@ ul { list-style: none; }
   line-height: 1.6;
 }
 
+/* ---------- Icon sizing ---------- */
+.card__icon .material-symbols-outlined       { font-size: 1.7rem; }
+.diff-card__icon .material-symbols-outlined  { font-size: 2rem; }
+
+.hero__image--placeholder .material-symbols-outlined,
+.two-col__image--placeholder .material-symbols-outlined,
+.service-intro__image--placeholder .material-symbols-outlined {
+  font-size: 6rem;
+  color: var(--teal);
+}
+
+.footer__social .material-symbols-outlined   { font-size: 1.1rem; color: rgba(255,255,255,.7); }
+.footer__social:hover .material-symbols-outlined { color: var(--white); }
+
+.footer__contact-item .material-symbols-outlined { font-size: 1rem; color: var(--teal-mid); flex-shrink: 0; margin-top: 2px; }
+
+.whatsapp-btn .material-symbols-outlined     { font-size: 1.9rem; }
+
+.contact-card__icon .material-symbols-outlined { font-size: 1.5rem; color: var(--teal); }
+.contact-social .material-symbols-outlined     { font-size: 1.1rem; }
+
 /* ---------- Mobile ---------- */
 @media (max-width: 1024px) {
   .cards-grid--3 { grid-template-columns: repeat(2, 1fr); }
@@ -812,7 +849,8 @@ ul { list-style: none; }
 
   .two-col { grid-template-columns: 1fr; gap: 36px; }
   .two-col--reversed .two-col__image { order: 0; }
-  .two-col__image--placeholder { height: 260px; font-size: 3.5rem; }
+  .two-col__image--placeholder { height: 260px; }
+  .two-col__image--placeholder .material-symbols-outlined { font-size: 4rem; }
 
   .service-intro { grid-template-columns: 1fr; }
 
