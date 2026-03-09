@@ -17,7 +17,7 @@
 html { scroll-behavior: smooth; font-size: 16px; }
 
 body {
-  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-family: 'Figtree', 'Segoe UI', Arial, sans-serif;
   color: #1a1a2e;
   background: #fff;
   line-height: 1.6;
@@ -144,13 +144,15 @@ ul { list-style: none; }
 .logo {
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--dark);
-  letter-spacing: -.02em;
 }
-.logo span { color: var(--teal); }
+.logo__img {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+.logo__img--footer {
+  height: 32px;
+}
 
 .nav { display: flex; align-items: center; gap: 4px; }
 .nav__link {
@@ -417,6 +419,7 @@ ul { list-style: none; }
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
+.diff-grid--2 { grid-template-columns: repeat(2, 1fr); }
 .diff-card {
   background: rgba(255,255,255,.08);
   border: 1px solid rgba(255,255,255,.15);
@@ -449,7 +452,7 @@ ul { list-style: none; }
   background: linear-gradient(135deg, var(--dark) 0%, #1a3a4a 60%, var(--teal-dark) 100%);
   color: var(--white);
   padding: 80px 0 64px;
-  text-align: center;
+  text-align: left;
 }
 .page-hero .tag { color: var(--teal-mid); }
 .page-hero__title {
@@ -461,7 +464,7 @@ ul { list-style: none; }
   font-size: 1.05rem;
   color: rgba(255,255,255,.8);
   max-width: 640px;
-  margin: 0 auto;
+  margin: 0;
   line-height: 1.7;
 }
 
@@ -472,7 +475,7 @@ ul { list-style: none; }
   gap: 8px;
   font-size: .8rem;
   color: rgba(255,255,255,.6);
-  justify-content: center;
+  justify-content: flex-start;
   margin-bottom: 20px;
 }
 .breadcrumb a { color: rgba(255,255,255,.6); transition: var(--transition); }
@@ -543,8 +546,7 @@ ul { list-style: none; }
   gap: 48px;
   padding-bottom: 48px;
 }
-.footer__brand .logo { color: var(--white); font-size: 1.4rem; }
-.footer__brand .logo span { color: var(--teal-mid); }
+.footer__brand .logo { display: flex; }
 .footer__brand p {
   margin-top: 16px;
   font-size: .875rem;
@@ -806,7 +808,7 @@ ul { list-style: none; }
 
 .footer__contact-item .material-symbols-outlined { font-size: 1rem; color: var(--teal-mid); flex-shrink: 0; margin-top: 2px; }
 
-.whatsapp-btn .material-symbols-outlined     { font-size: 1.9rem; }
+.whatsapp-btn img { width: 32px; height: 32px; object-fit: contain; }
 
 .contact-card__icon .material-symbols-outlined { font-size: 1.5rem; color: var(--teal); }
 .contact-social .material-symbols-outlined     { font-size: 1.1rem; }
