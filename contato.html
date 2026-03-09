@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato — Delaw Cálculos Judiciais</title>
+  <meta name="description" content="Entre em contato com a Delaw. Solicite seu cálculo com segurança e agilidade. Respondemos com atenção e agilidade." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Contact page specific */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: start;
+    }
+    .contact-info__title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 24px;
+    }
+    .contact-card {
+      display: flex;
+      gap: 16px;
+      padding: 20px;
+      background: var(--gray-light);
+      border-radius: var(--radius);
+      margin-bottom: 16px;
+      align-items: flex-start;
+    }
+    .contact-card__icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+    .contact-card__label {
+      font-size: .8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--teal);
+      margin-bottom: 4px;
+    }
+    .contact-card__value {
+      font-size: .95rem;
+      color: var(--dark);
+      font-weight: 500;
+    }
+    .contact-socials {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .contact-social {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      background: var(--gray-light);
+      border-radius: 8px;
+      font-size: .875rem;
+      font-weight: 500;
+      color: var(--gray);
+      transition: var(--transition);
+      text-decoration: none;
+    }
+    .contact-social:hover {
+      background: var(--teal-light);
+      color: var(--teal);
+    }
+
+    .form-wrapper {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: var(--shadow);
+    }
+    .form-wrapper__title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .form-wrapper__sub {
+      font-size: .875rem;
+      color: var(--gray);
+      margin-bottom: 28px;
+    }
+
+    .file-upload {
+      border: 2px dashed var(--border);
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: var(--transition);
+      position: relative;
+    }
+    .file-upload:hover { border-color: var(--teal); background: var(--teal-light); }
+    .file-upload input[type="file"] {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+    }
+    .file-upload__icon { font-size: 1.5rem; margin-bottom: 8px; }
+    .file-upload__text { font-size: .875rem; color: var(--gray); }
+    .file-upload__text strong { color: var(--teal); }
+
+    @media (max-width: 768px) {
+      .contact-layout { grid-template-columns: 1fr; gap: 40px; }
+      .form-wrapper { padding: 24px; }
+      .contact-socials { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="logo">DE<span>LAW</span></a>
+
+        <nav class="nav" id="nav">
+          <a href="index.html" class="nav__link">Home</a>
+          <a href="quem-somos.html" class="nav__link">Quem Somos</a>
+          <div class="nav__item">
+            <a href="servicos.html" class="nav__link">Serviços ▾</a>
+            <div class="nav__dropdown">
+              <a href="servicos/elaboracao-calculos.html">Elaboração de Cálculos</a>
+              <a href="servicos/atualizacao-calculos.html">Atualização de Cálculos</a>
+              <a href="servicos/simulacoes-estrategicas.html">Simulações Estratégicas</a>
+              <a href="servicos/calculos-liquidacao.html">Cálculos de Liquidação</a>
+              <a href="servicos/impugnacao-calculos.html">Impugnação de Cálculos</a>
+              <a href="servicos/estimativa-passivo.html">Estimativa de Passivo</a>
+            </div>
+          </div>
+          <a href="diferenciais.html" class="nav__link">Diferenciais</a>
+          <a href="contato.html" class="nav__link active">Contato</a>
+          <a href="contato.html" class="btn btn--primary nav__cta">Falar com especialista</a>
+        </nav>
+
+        <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb__sep">›</span>
+        <span>Contato</span>
+      </div>
+      <p class="tag">Contato</p>
+      <h1 class="page-hero__title">Solicite seu cálculo com segurança e agilidade</h1>
+      <p class="page-hero__text">Utilize o formulário abaixo para entrar em contato com nossa equipe. Analisaremos sua demanda com atenção e retornaremos com agilidade, oferecendo uma solução técnica alinhada às necessidades do seu processo.</p>
+    </div>
+  </section>
+
+  <!-- CONTATO LAYOUT -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- Info -->
+        <div>
+          <h2 class="contact-info__title">Informações de contato</h2>
+
+          <div class="contact-card">
+            <div class="contact-card__icon">📞</div>
+            <div>
+              <p class="contact-card__label">Telefone / WhatsApp</p>
+              <p class="contact-card__value">(51) 9 9999.9999</p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card__icon">✉️</div>
+            <div>
+              <p class="contact-card__label">E-mail</p>
+              <p class="contact-card__value">atendimento@delaw.com.br</p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card__icon">📍</div>
+            <div>
+              <p class="contact-card__label">Endereço</p>
+              <p class="contact-card__value">AV. Carlos Gomes, 700<br>Sala 606 — 5º andar<br>Boa Vista, Porto Alegre – RS</p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card__icon">🕐</div>
+            <div>
+              <p class="contact-card__label">Horário de atendimento</p>
+              <p class="contact-card__value">Segunda a Sexta, das 9h às 18h</p>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <a href="#" class="contact-social" aria-label="Instagram">📷 Instagram</a>
+            <a href="#" class="contact-social" aria-label="LinkedIn">💼 LinkedIn</a>
+            <a href="#" class="contact-social" aria-label="YouTube">▶️ YouTube</a>
+          </div>
+
+          <!-- Mapa placeholder -->
+          <div style="margin-top:28px;background:var(--teal-light);border-radius:var(--radius);height:200px;display:flex;align-items:center;justify-content:center;border:1px solid var(--teal-mid);">
+            <div style="text-align:center;color:var(--teal);">
+              <div style="font-size:2rem;margin-bottom:8px;">📍</div>
+              <p style="font-size:.875rem;font-weight:600;">AV. Carlos Gomes, 700 — Porto Alegre/RS</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulário -->
+        <div class="form-wrapper">
+          <h3 class="form-wrapper__title">Envie sua demanda</h3>
+          <p class="form-wrapper__sub">Preencha os campos abaixo. Nossa equipe retornará em até 24 horas úteis.</p>
+
+          <form class="form" action="#" method="POST" enctype="multipart/form-data">
+            <div class="form__grid">
+              <div class="form__group form__group--full">
+                <label for="nome">Nome Completo *</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
+              </div>
+
+              <div class="form__group">
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+              </div>
+
+              <div class="form__group">
+                <label for="telefone">Telefone *</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(51) 9 0000-0000" required />
+              </div>
+
+              <div class="form__group form__group--full">
+                <label for="tipo">Tipo de solicitante *</label>
+                <select id="tipo" name="tipo" required>
+                  <option value="" disabled selected>Selecione uma opção</option>
+                  <option value="advogado">Advogado</option>
+                  <option value="escritorio">Escritório de Advocacia</option>
+                  <option value="empresa">Empresa / Departamento Jurídico</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </div>
+
+              <div class="form__group form__group--full">
+                <label for="servico">Tipo de serviço</label>
+                <select id="servico" name="servico">
+                  <option value="" disabled selected>Selecione o serviço desejado</option>
+                  <option value="elaboracao">Elaboração de Cálculos</option>
+                  <option value="atualizacao">Atualização de Cálculos</option>
+                  <option value="simulacao">Simulações Estratégicas para Acordos</option>
+                  <option value="liquidacao">Cálculos de Liquidação</option>
+                  <option value="impugnacao">Impugnação de Cálculos</option>
+                  <option value="passivo">Estimativa de Passivo Trabalhista</option>
+                  <option value="outro">Outro / Não sei</option>
+                </select>
+              </div>
+
+              <div class="form__group form__group--full">
+                <label for="demanda">Breve descrição da demanda *</label>
+                <textarea id="demanda" name="demanda" placeholder="Descreva brevemente o seu caso, a fase processual, as verbas envolvidas e qualquer informação relevante que nos ajude a entender sua necessidade..." required></textarea>
+              </div>
+
+              <div class="form__group form__group--full">
+                <label>Upload de documentos (opcional)</label>
+                <div class="file-upload">
+                  <input type="file" name="documentos" multiple accept=".pdf,.doc,.docx,.xls,.xlsx" />
+                  <div class="file-upload__icon">📎</div>
+                  <p class="file-upload__text"><strong>Clique para selecionar</strong> ou arraste arquivos aqui<br><small style="color:#999;">PDF, DOC, DOCX, XLS, XLSX — máx. 10MB por arquivo</small></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="form__submit">
+              <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;font-size:1rem;padding:16px;">
+                Enviar solicitação
+              </button>
+              <p style="font-size:.8rem;color:var(--gray);margin-top:12px;">
+                Ao enviar, você concorda com nossa política de privacidade e tratamento sigiloso das informações.
+              </p>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO ATENDEMOS -->
+  <section class="section section--alt">
+    <div class="container text-center">
+      <p class="tag">Nosso processo</p>
+      <h2 class="section-title">Como funciona o atendimento</h2>
+      <p class="section-subtitle">Do primeiro contato à entrega dos cálculos, um processo ágil, transparente e orientado ao seu resultado.</p>
+
+      <div class="cards-grid cards-grid--3" style="margin-top:0;">
+        <div class="card">
+          <div class="card__icon" style="background:var(--teal);color:#fff;">01</div>
+          <h3 class="card__title">Você entra em contato</h3>
+          <p class="card__text">Preencha o formulário ou nos envie uma mensagem pelo WhatsApp descrevendo sua demanda e os documentos disponíveis.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon" style="background:var(--teal);color:#fff;">02</div>
+          <h3 class="card__title">Analisamos sua demanda</h3>
+          <p class="card__text">Nossa equipe revisa os documentos enviados, avalia o escopo do trabalho e retorna com prazo e proposta técnica personalizada.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon" style="background:var(--teal);color:#fff;">03</div>
+          <h3 class="card__title">Entregamos com precisão</h3>
+          <p class="card__text">Os cálculos são elaborados, revisados por dupla conferência e entregues dentro do prazo acordado, com suporte para dúvidas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="logo">DE<span>LAW</span></a>
+          <p>Empresa especializada em cálculos judiciais, com atuação em todo o território nacional, apoiando advogados e empresas com precisão técnica e segurança jurídica.</p>
+          <div class="footer__socials">
+            <a href="#" class="footer__social" aria-label="Instagram">📷</a>
+            <a href="#" class="footer__social" aria-label="LinkedIn">💼</a>
+            <a href="#" class="footer__social" aria-label="YouTube">▶️</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Navegação</h4>
+          <nav class="footer__links">
+            <a href="index.html">Home</a>
+            <a href="quem-somos.html">Quem Somos</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="diferenciais.html">Diferenciais</a>
+            <a href="contato.html">Contato</a>
+          </nav>
+        </div>
+        <div>
+          <h4 class="footer__heading">Serviços</h4>
+          <nav class="footer__links">
+            <a href="servicos/elaboracao-calculos.html">Elaboração de Cálculos</a>
+            <a href="servicos/atualizacao-calculos.html">Atualização de Cálculos</a>
+            <a href="servicos/simulacoes-estrategicas.html">Simulações Estratégicas</a>
+            <a href="servicos/calculos-liquidacao.html">Cálculos de Liquidação</a>
+            <a href="servicos/impugnacao-calculos.html">Impugnação de Cálculos</a>
+            <a href="servicos/estimativa-passivo.html">Estimativa de Passivo</a>
+          </nav>
+        </div>
+        <div>
+          <h4 class="footer__heading">Contato</h4>
+          <div class="footer__contact-item"><span>📞</span><span>(51) 9 9999.9999</span></div>
+          <div class="footer__contact-item"><span>✉️</span><span>atendimento@delaw.com.br</span></div>
+          <div class="footer__contact-item"><span>📍</span><span>AV. Carlos Gomes, 700 Sala 606 5 andar, Boa Vista, Porto Alegre – RS</span></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>Delaw Cálculos Judiciais ©2026. Todos os Direitos Reservados.</span>
+        <span>Desenvolvido por Gama.</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5551999999999" class="whatsapp-btn" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav').classList.toggle('nav--open');
+    }
+  </script>
+</body>
+</html>
